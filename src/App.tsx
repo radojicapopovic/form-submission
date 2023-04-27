@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Form} from "./components/Form";
+import { Form } from "./components/Form";
 import { FormInput } from "./components/FormInput";
 import "./App.css";
 
@@ -39,6 +39,3 @@ export const PageWithForm: React.FC = () => {
 };
 
 export default PageWithForm;
-
-
-

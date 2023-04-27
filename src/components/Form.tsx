@@ -1,4 +1,3 @@
-// src/components/Form.tsx
 import React, { createContext, useState, FormEvent } from "react";
 
 interface FormContextProps {
@@ -6,7 +5,9 @@ interface FormContextProps {
   handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-export const FormContext = createContext<FormContextProps>({} as FormContextProps);
+export const FormContext = createContext<FormContextProps>(
+  {} as FormContextProps
+);
 
 interface FormProps {
   initialValues?: any;
@@ -14,7 +15,11 @@ interface FormProps {
   children: React.ReactNode;
 }
 
-export const Form: React.FC<FormProps> = ({ initialValues, onSubmit, children }) => {
+export const Form: React.FC<FormProps> = ({
+  initialValues,
+  onSubmit,
+  children,
+}) => {
   const [values, setValues] = useState(initialValues || {});
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
